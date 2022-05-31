@@ -1,0 +1,55 @@
+#selectDestino, #selectOrigen, #selectPasajeros{
+    width: 150px;
+    height: 50px;
+}
+
+#botonBuscar{
+    height: 50px;
+    width: 100px;
+}
+
+#item2 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+#startDate2, #startDate  {
+    width: 100px;
+    height: 50px;
+}
+
+
+.item {
+    float: left;
+}
+
+#botonBuscar2{
+    height: 60px;
+    width: 120px;
+}
+
+#item2, #item3, #item4 {
+    padding-right: 15px;
+    
+}
+
+#item1daytour, #item2daytour{
+    padding-right: 15px;
+}
+
+#item4daytour{
+    width: 100px;
+    height: 60px;
+}
+
+#startDate3{
+    width: 100px;
+    height: 60px;
+}
+
+
+#selectOrigenDaytour, #selectPasajerosDaytour {
+    width: 250px;
+    height: 60px;
+}
