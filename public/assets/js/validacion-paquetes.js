@@ -7,19 +7,19 @@ const btnCompra3 = document.querySelector('#btnCompraPro3');
 
 btnCompra1.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log('Producto adquirido, rellene el formulario');
+    alert('Producto adquirido, rellene el formulario');
 
 });
 
 
 btnCompra2.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log('Producto adquirido, rellene el formulario' );
+    alert('Producto adquirido, rellene el formulario' );
 
 });
 
 btnCompra3.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log('Producto adquirido, rellene el formulario');
+   alert('Producto adquirido, rellene el formulario');
 
 });
