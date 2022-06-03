@@ -47,15 +47,16 @@
 					<h3>Iniciar sesión</h3>
 
 					<label for="exampleInputEmail1" class="form-label">Email address</label>
-					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+					<input type="email" class="form-control" id="emaillogin" aria-describedby="emailHelp">
 				</div>
 				<div class="mb-3">
 					<label for="exampleInputPassword1" class="form-label">Password</label>
-					<input type="password" class="form-control" id="exampleInputPassword1">
+					<input type="password" class="form-control" id="password">
 				</div>
 
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button id="buttonLogin" type="submit" class="btn btn-primary">Ingresar</button>
 			</form>
+
 		</div>
 		<a href="#two" class="more">Learn More</a>
 	</section>
@@ -72,7 +73,7 @@
 				<form id="formulario">
 
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+						<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
 						<label class="form-check-label" for="flexRadioDefault1">
 							Ida y vuelta
 						</label>
@@ -80,9 +81,9 @@
 
 
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-							checked>
-						<label class="form-check-label" for="flexRadioDefault2">
+						<input  class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+							>
+						<label  class="form-check-label" for="flexRadioDefault2">
 							Solo ida
 						</label>
 					</div>
@@ -109,8 +110,8 @@
 						<div class="item" id="item2">
 							<select id="selectDestino" class="form-select " aria-label="Default select example">
 								<option selected>Elegí destino</option>
-								<option id="value1" value="1">Tigre</option>
-								<option id="value2" value="2">Puerto Madero</option>
+								<option id="value1" value="1">Montevideo</option>
+								<option id="value2" value="2">Punta Del Este </option>
 							</select>
 						</div>
 
@@ -139,11 +140,13 @@
 
 				</form>
 
+				<div id="resultado">
 
+				</div>
 
 			</article>
 		</div>
-		<a href="#three" class="more">Learn More</a>
+		<a href="#four" class="more">Learn More</a>
 	</section>
 
 
@@ -198,7 +201,9 @@
 
 				</form>
 
+				<div id="resultadoDayTour">
 
+				</div>
 
 			</article>
 		</div>
@@ -207,7 +212,9 @@
 	<!-- Footer -->
 	{{> footer}}
 
+
+	<script src="assets/js/control-pasajes.js"></script>
+	<script src="assets/js/validacion-hardcodeada.js"></script>
 </body>
-<script src="assets/js/control-pasajes.js"></script>
 
 </html>
