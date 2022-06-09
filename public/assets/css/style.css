@@ -3,9 +3,16 @@
     height: 50px;
 }
 
+#formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 #botonBuscar{
+    flex: 1;
     height: 50px;
     width: 100px;
+    margin: 0 auto;
 }
 
 #item2 {
@@ -27,7 +34,14 @@
 #botonBuscar2{
     height: 60px;
     width: 120px;
+   
 }
+.disabled{
+    pointer-events: none;
+  }
+  .enabled{
+    pointer-events: fill;
+  }
 
 #item2, #item3, #item4 {
     padding-right: 15px;

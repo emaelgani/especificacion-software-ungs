@@ -2,6 +2,7 @@
 const submit = document.querySelector('#buttonLogin');
 const formulario = document.querySelector('#one');
 const submitBuscar = document.querySelector('#botonBuscar');
+const submitVolveraBuscar = document.querySelector('#botonVolverAbuscar');
 const divResultado = document.querySelector('#resultado');
 const valorOrigen = document.querySelector('#selectOrigen');
 const valorDestino = document.querySelector('#selectDestino');
@@ -14,6 +15,8 @@ const butonBuscarDayTour = document.querySelector('#botonBuscar2');
 const pasajerosDay = document.querySelector('#selectPasajerosDaytour');
 const dateDay = document.querySelector('#startDate3');
 const resultadoDay = document.querySelector('#resultadoDayTour');
+
+const contenedorAcompañantes = document.querySelector(".contenedor-acompañante");
 
 var ingresado = false;
 
@@ -53,6 +56,10 @@ submitBuscar.addEventListener('click', (e) => {
     if (valorOrigen.value != 'Elegí origen' && valorDestino.value != 'Elegí destino'
         && soloIdaActive.checked == true && fechaSalida.value != '' && pasajeros.value != 'Pasajeros') {
 
+        contenedorAcompañantes.style.display = "none";
+        submitBuscar.classList.toggle("disabled");
+        submitVolveraBuscar.classList.remove("disabled");
+        submitVolveraBuscar.classList.toggle("enabled");
 
         divResultado.innerHTML = `<div class="list-group">
     <div class="list-group-item list-group-item-action " aria-current="true">
@@ -82,6 +89,7 @@ submitBuscar.addEventListener('click', (e) => {
    
 </div>
 `;
+divResultado.style.display = "block";
         const btnComprar1 = document.querySelector('#btnComprar1');
         btnComprar1.addEventListener('click', (e) => {
             e.preventDefault();
@@ -118,7 +126,15 @@ submitBuscar.addEventListener('click', (e) => {
     }
 });
 
+submitVolveraBuscar.addEventListener("click", ()=>{
+    divResultado.style.display = "none";
+    contenedorAcompañantes.style.display = "flex";
+    submitVolveraBuscar.classList.remove("enabled");
+    submitBuscar.classList.remove("disabled");
+    submitBuscar.classList.toggle("enabled");
+    submitVolveraBuscar.classList.toggle("disabled");
 
+})
 
 
 /* =========Day tour========== */

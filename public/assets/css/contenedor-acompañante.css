@@ -1,0 +1,18 @@
+.contenedor-acompañante{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.contenedor-menores, .contenedor-mayores, .contenedor-adulto-basico, .contenedor-adulto-medio, .contenedor-adulto-premium{
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-menores input, .contenedor-mayores input{
+    margin: 10px 10px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+.contenedor-acompañante span{
+   color: white;
+}
