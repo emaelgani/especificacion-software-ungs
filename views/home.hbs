@@ -8,6 +8,7 @@
 
 <head>
 	<title>{{ titulo }}</title>
+	<link rel="icon" href="images/logo.png">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="assets/css/contenedor-acompañante.css">
@@ -19,20 +20,11 @@
 
 <body>
 
-	<!-- Header -->
 	{{> header}}
-
-	<!-- Nav -->
 	{{> narvbar}}
 
-	<!-- Banner -->
-	<!--
-			Note: To show a background image, set the "data-bg" attribute below
-			to the full filename of your image. This is used in each section to set
-			the background image.
-		-->
-
 	<section id="banner" class="bg-img" data-bg="banner.jpg">
+
 		<div class="inner">
 			<header>
 				<h1>Buquealtoque</h1>
@@ -47,7 +39,6 @@
 			<form>
 				<div class="mb-3">
 					<h3>Iniciar sesión</h3>
-
 					<label for="exampleInputEmail1" class="form-label">Email address</label>
 					<input type="email" class="form-control" id="emaillogin" aria-describedby="emailHelp">
 				</div>
@@ -63,7 +54,7 @@
 		<a href="#two" class="more">Learn More</a>
 	</section>
 
-	<!-- Two -->
+	<!--  """""""""""""""""""""""""""""""""""""""""Pasajes""""""""""""""""""""""""""""""""""""""""""""""""""" -->
 	<section id="two" class="wrapper post bg-img" data-bg="banner5.jpg">
 		<div class="inner">
 			<article class="box">
@@ -71,53 +62,142 @@
 					<h2>Pasajes</h2>
 				</header>
 				<form id="formulario">
-					<div class="ida-vuelta">
+					<div class="ida-vuelta pasaje">
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+							<input class="form-check-input" type="radio" name="idavueltaPasaje" id="idaYvueltaPasaje"
 								checked>
-							<label class="form-check-label" for="flexRadioDefault1">
+							<label class="form-check-label" for="idaYvueltaPasaje">
 								Ida y vuelta
 							</label>
 						</div>
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-							<label class="form-check-label" for="flexRadioDefault2">
+							<input class="form-check-input" type="radio" name="idavueltaPasaje" id="soloIdaPasaje">
+							<label class="form-check-label" for="soloIdaPasaje">
 								Solo ida
 							</label>
 						</div>
-						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-							<label class="form-check-label" for="flexRadioDefault3">
-								Salgo desde Uruguay
-							</label>
-						</div>
+						
 					</div>
 					<div class="datos-viaje">
 						<div class="item" id="item1">
-							<select id="selectOrigen" class="form-select inline " aria-label="Default select example">
+							<select id="selectOrigenPasaje" class="form-select inline "
+								aria-label="Default select example">
 								<option selected>Elegí origen</option>
-								<option id="value1" value="1">Tigre</option>
-								<option id="value2" value="2">Puerto Madero</option>
+								<option id="value1" value="Tigre">Tigre</option>
+								<option id="value2" value="Puerto Madero">Puerto Madero</option>
 							</select>
 						</div>
 						<div class="item" id="item2">
-							<select id="selectDestino" class="form-select " aria-label="Default select example">
+							<select id="selectDestinoPasaje" class="form-select " aria-label="Default select example">
 								<option selected>Elegí destino</option>
-								<option id="value1" value="1">Montevideo</option>
-								<option id="value2" value="2">Punta Del Este </option>
+								<option id="value1" value="Montevideo">Montevideo</option>
+								<option id="value2" value="Punta Del Este">Punta Del Este </option>
 							</select>
 						</div>
 
 						<div class="item" id="item3">
-							<input id="startDate" class="form-control" type="date" />
+							<input id="SalidaPasaje" class="form-control" type="date" />
 						</div>
 
 						<div class="item" id="item4">
-							<input id="startDate2" class="form-control" type="date" />
+							<input id="vueltaPasaje" class="form-control" type="date" />
+						</div>
+
+					</div>
+					<div class="contenedor-acompañante contenedor-acompañante-pasaje">
+						<div class="contenedor-menores contenedor-menores-pasaje">
+							<div class="contenedor-adulto-basico contenedor-adulto-basico-pasaje">
+								<span>Menores Basico </span><input type="number" min="0">
+							</div>
+							<div class="contenedor-adulto-medio contenedor-adulto-medio-pasaje">
+								<span>Menores Medium </span><input type="number" min="0">
+							</div>
+							<div class="contenedor-adulto-premium contenedor-adulto-premium-pasaje">
+								<span>Menores Premium </span> <input type="number" min="0">
+							</div>
+						</div>
+						<div class="contenedor-mayores contenedor-mayores-pasaje">
+							<div class="contenedor-adulto-basico contenedor-adulto-basico-pasaje">
+								<span>Adultos Basico </span><input type="number" min="0">
+							</div>
+							<div class="contenedor-adulto-medio contenedor-adulto-medio-pasaje">
+								<span>Adultos Medium </span><input type="number" min="0">
+							</div>
+							<div class="contenedor-adulto-premium contenedor-adulto-premium-pasaje">
+								<span>Adultos Premium </span> <input type="number" min="0">
+							</div>
+						</div>
+					</div>
+
+					<!-- aca -->
+					<div class="botones">
+						<button id="botonBuscarPasaje" type="button" class="btn btn-primary enabled">Buscar</button>
+						<button id="botonVolverAbuscarPasaje" type="button" class="btn btn-primary disabled">volver a
+							buscar</button>
+					</div>
+
+				</form>
+
+				<div id="resultadoPasaje">
+
+				</div>
+
+			</article>
+		</div>
+		<a href="#four" class="more">Learn More</a>
+	</section>
+
+	{{!-- paquetes --}}
+	<section id="two" class="wrapper post bg-img" data-bg="paquetes.jpg">
+		<div class="inner">
+			<article class="box">
+				<header>
+					<h2>Paquetes</h2>
+				</header>
+				<form id="formulario">
+					<div class="ida-vuelta">
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="idaVueltaPaquete" id="idaYvueltaPaquete"
+								checked>
+							<label class="form-check-label" for="idaYvueltaPaquete">
+								Ida y vuelta
+							</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="idaVueltaPaquete" id="soloIdaPaquete">
+							<label class="form-check-label" for="soloIdaPaquete">
+								Solo ida
+							</label>
+						</div>
+					
+					</div>
+					<div class="datos-viaje">
+						<div class="item" id="item1">
+							<select id="selectOrigenPaquete" class="form-select inline "
+								aria-label="Default select example">
+								<option selected>Elegí origen</option>
+								<option id="value1" value="Tigre">Tigre</option>
+								<option id="value2" value="Puerto Madero">Puerto Madero</option>
+							</select>
+						</div>
+						<div class="item" id="item2">
+							<select id="selectDestinoPaquete" class="form-select " aria-label="Default select example">
+								<option selected>Elegí destino</option>
+								<option id="value1" value="Montevideo">Montevideo</option>
+								<option id="value2" value="Punta Del Este">Punta Del Este </option>
+							</select>
+						</div>
+
+						<div class="item" id="item3">
+							<input id="SalidaPaquete" class="form-control" type="date" />
+						</div>
+
+						<div class="item" id="item4">
+							<input id="vueltaPaquete" class="form-control" type="date" />
 						</div>
 
 
-						<div class="item" id="item5">
+						{{!-- <div class="item" id="item5">
 							<select id="selectPasajeros" class="form-select" aria-label="Default select example">
 								<option selected>Pasajeros</option>
 								<option value="1">1</option>
@@ -126,9 +206,9 @@
 								<option value="3">4</option>
 								<option value="3">Más de 4</option>
 							</select>
-						</div>
+						</div> --}}
 					</div>
-					<div class="contenedor-acompañante">
+					<div class="contenedor-acompañante contenedor-acompañante-Paquete">
 						<div class="contenedor-menores">
 							<div class="contenedor-adulto-basico">
 								<span>Menores Basico </span><input type="number" min="0">
@@ -139,7 +219,7 @@
 							<div class="contenedor-adulto-premium">
 								<span>Menores Premium </span> <input type="number" min="0">
 							</div>
-								
+
 						</div>
 						<div class="contenedor-mayores">
 							<div class="contenedor-adulto-basico">
@@ -157,13 +237,14 @@
 
 					<!-- aca -->
 					<div class="botones">
-					<button id="botonBuscar" type="button" class="btn btn-primary enabled">Buscar</button>
-					<button id="botonVolverAbuscar" type="button" class="btn btn-primary disabled" >volver a buscar</button>
+						<button id="botonBuscarPaquete" type="button" class="btn btn-primary enabled">Buscar</button>
+						<button id="botonVolverAbuscarPaquete" type="button" class="btn btn-primary disabled">volver a
+							buscar</button>
 					</div>
 
 				</form>
 
-				<div id="resultado">
+				<div id="resultadoPaquete">
 
 				</div>
 
@@ -171,6 +252,7 @@
 		</div>
 		<a href="#four" class="more">Learn More</a>
 	</section>
+
 
 
 
@@ -183,48 +265,58 @@
 					<p>Escapadas durante el dia</p>
 				</header>
 				<form id="formulario2">
-
-
-
-					<div>
-						<div class="item" id="item1daytour">
+					<div class="datos-viaje">
+						<item class="item" id="item1daytour">
 							<select id="selectOrigenDaytour" class="form-select inline "
 								aria-label="Default select example">
-								<option selected>Elegí destino</option>
-								<option value="1">atlantida</option>
-								<option value="2">carmelo</option>
-								<option value="3">colonia del sacramento</option>
-								<option value="4">colonia suiza</option>
-							</select>
-						</div>
-
-						<div class="item" id="item2daytour">
-
-							<select id="selectPasajerosDaytour" class="form-select inline "
-								aria-label="Default select example">
-								<option selected>Cantidad de pasajeros</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="4">Más de 4</option>
+								<option selected disabled>Elegí destino</option>
+								<option value="atlantida">Atlantida</option>
+								<option value="carmelo">Carmelo</option>
+								<option value="colonia del sacramento">Colonia del sacramento</option>
+								<option value="colonia suiza">Colonia suiza</option>
 							</select>
 
-						</div>
 
 
-						<div class="item" id="item4daytour">
-							<input id="startDate3" class="form-control" type="date" />
-						</div>
-
+						</item>
+						<input id="SalidaDaytour" class="form-control" type="date" />
 
 					</div>
+					<div class="contenedor-acompañante contenedor-acompañante-daytour">
+						<div class="contenedor-menores">
+							<div class="contenedor-adulto-basico">
+								<span>Menores Basico </span><input type="number" min="0">
+							</div>
+							<div class="contenedor-adulto-medio">
+								<span>Menores Medium </span><input type="number" min="0">
+							</div>
+							<div class="contenedor-adulto-premium">
+								<span>Menores Premium </span> <input type="number" min="0">
+							</div>
 
-					<button id="botonBuscar2" type="button" class="btn btn-primary">Buscar</button>
+						</div>
+						<div class="contenedor-mayores">
+							<div class="contenedor-adulto-basico">
+								<span>Adultos Basico </span><input type="number" min="0">
+							</div>
+							<div class="contenedor-adulto-medio">
+								<span>Adultos Medium </span><input type="number" min="0">
+							</div>
+							<div class="contenedor-adulto-premium">
+								<span>Adultos Premium </span> <input type="number" min="0">
+							</div>
+						</div>
+					</div>
+					<div class="botones">
+						<button id="botonBuscarDaytour" type="button" class="btn btn-primary enabled">Buscar</button>
+						<button id="botonVolverAbuscarDaytour" type="button" class="btn btn-primary disabled">volver a
+							buscar</button>
+					</div>
+
 
 				</form>
 
-				<div id="resultadoDayTour">
+				<div id="resultadoDaytour">
 
 				</div>
 
@@ -236,8 +328,13 @@
 	{{> footer}}
 
 
+
+	<script src="assets\js\validacion-hardcodeada.js"></script>
 	<script src="assets/js/control-pasajes.js"></script>
-	<script src="assets/js/validacion-hardcodeada.js"></script>
+	<script src="assets\js\validacion-paquetes.js"></script>
+	<script src="assets/js/inicio-sesion.js"></script>
+	<script src="assets/js/fecha.js"></script>
+	
 </body>
 
 </html>

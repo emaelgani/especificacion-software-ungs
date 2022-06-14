@@ -2,13 +2,50 @@
     width: 150px;
     height: 50px;
 }
+h4{
+    font-size: 10px;
+}
+.efect{
+    color: white;
+   
+    -webkit-box-shadow: 2px -3px 15px 12px rgba(0,0,0,0.31); 
+    box-shadow: 2px -3px 15px 12px rgba(0,0,0,0.31);
+}
 
-#formulario{
+#formulario, #formulario2{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-#botonBuscar{
+.datos-viaje {
+    display: flex;
+   justify-content: center;
+   
+  }
+
+@media (max-width: 480px) {
+    .datos-viaje {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      #formulario .datos-viaje .item > * {
+        min-width: 100%;
+        margin: 10px auto;
+      }
+      #formulario2 .datos-viaje .item > * {
+        
+        width: 100%;
+        margin: 10px auto;
+      } 
+      .contenedor-acompañante{
+        display: flex;
+        flex-direction: column;
+      }
+    
+  }
+
+#botonBuscar, #botonBuscar2{
     flex: 1;
     height: 50px;
     width: 100px;
@@ -51,11 +88,13 @@
 #item1daytour, #item2daytour{
     padding-right: 15px;
 }
-
-#item4daytour{
+.datos-viaje .form-control{
+    width: auto;
+}
+/* #item4daytour{
     width: 100px;
     height: 60px;
-}
+} */
 
 #startDate3{
     width: 100px;
@@ -66,4 +105,12 @@
 #selectOrigenDaytour, #selectPasajerosDaytour {
     width: 250px;
     height: 60px;
+}
+.basicoDaytour{
+    display: flex;
+    justify-content: center;
+}
+
+.botones{
+    margin-top: 20px;
 }
